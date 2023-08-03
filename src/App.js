@@ -1,15 +1,5 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
-
-// function text_toggle({active}) {
-//   if (!active) {
-//     return null;
-//   } 
-//   else {
-//     return <p className='fixed flex left-5 bottom-5 animate-test-anim text-indigo-900 pt-2 pb-2 sm:w-1/5 w-1/3
-//       mx-auto text-m bg-sky-200 rounded-xl shadow justify-center items-center text-xl'>Button Active</p>;
-//   }
-// }
 
 function nav_button(setActive, nav_anim) {
   const bg = {
@@ -128,10 +118,8 @@ function return_text(text) {
 }
 
 function content() {
-  const code_text = '<div class="some class">Text</div>';
   const code_text_style_1 = "text-blue-400 mb-1 last:m-0";
   const code_text_style_2 = "text-blue-400 ml-5 mb-1 last:m-0";
-  const code_text_style_3 = "text-blue-400 ml-9 mb-1 last:m-0";
   
   return <>
     <div className='divide-y'>
@@ -235,22 +223,17 @@ function App() {
           nav_bar_mobile(nav_anim, setActive) :
           <></>
         }
-        {/* {content()} */}
       </div>
       : 
       <>
       <div className='sm:w-64 lg:w-80 w-full sticky top-0 h-screen border-r-2 flex flex-column'>
         {nav_bar_normal()}
       </div>
-      {/* <div className='sm:w-64 lg:w-80 w-full sticky top-0 h-screen border-r-2 flex flex-column'>
-        {nav_bar_test()}
-      </div> */}
       </>
     }
       <div className='w-full pl-10 pr-10 pt-9 sm:pl-20 sm:pr-20 sm:pt-10'>
         {content()}
       </div>
-
     
     </>
   );
